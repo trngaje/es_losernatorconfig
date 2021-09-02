@@ -366,6 +366,7 @@ function onend_retroarch_joystick() {
 
     # disable any auto configs for the same device to avoid duplicates
     local file
+    mkdir -p "$configdir/all/retroarch-joypads"
     local dir="$configdir/all/retroarch-joypads"
     while read -r file; do
         mv "$file" "$file.bak"
